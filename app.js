@@ -15,6 +15,9 @@ app.use(express.json());
 app.use(apiRouter);
 
 
+app.get('/', (req, res) => res.status(200).json({
+  data: 'Welcome to natterbase-api'
+}));
 
 const port = process.env.PORT || 3500;
 app.listen(port, () => {
